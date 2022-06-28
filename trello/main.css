@@ -1,0 +1,254 @@
+/* Your code here */
+body {
+  margin: 0px;
+  font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+}
+
+.header-nav__container {
+  background-color: #026AA7;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 5px 0 5px 5px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Supplied CSS follows. */
+.header-nav__group {
+  display: flex;
+  margin: 0 5px 0 5px;
+  padding: 0 2px 0 2px;
+}
+
+@media screen and (max-width: 730px) {
+
+  #search,
+  #boards {
+    visibility: hidden;
+  }
+
+}
+
+#alerts {
+  background-color: #CF513D;
+}
+
+#alerts:hover {
+  background-color: #d67465;
+}
+
+.header-nav__button {
+  display: inline-flex;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  background-color: hsla(0, 0%, 100%, .3);
+  box-shadow: none;
+  color: #fff;
+  line-height: 32px;
+  margin: 0 4px 0 0;
+  transition: .1s ease;
+  white-space: nowrap;
+  padding: 8px;
+  height: 20px;
+}
+
+.header-nav__button#search>input {
+  border-style: none;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.header-nav__button>.boards-label {
+  font-weight: 700;
+  padding-left: 4px;
+}
+
+.header-nav__button:hover {
+  background-color: rgb(46, 54, 61);
+}
+
+.header-nav__trello-logo {
+  opacity: 0.5;
+  display: block;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 5px;
+}
+
+.header-nav__button>i {
+  width: 24px;
+}
+
+.team__container {
+  background-color: #f4f5f7;
+  padding: 32px;
+}
+
+.team__info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 650px;
+  text-align: center;
+}
+
+.fa-solid,
+fa-lock {
+  color: #d62424;
+  font-size: small;
+  margin: 5px 5px 5px 15px;
+}
+
+.my_team {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.private {
+  margin: 5px 5px 5px 5px;
+  font-weight: 600;
+}
+
+.team__info,
+h1 {
+  margin: 5px 0 12px 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.team__info,
+a {
+  color: #172b4d;
+  line-height: 20px;
+  font-weight: normal;
+  font-size: small;
+}
+
+.team-link {
+  margin-right: 50px;
+}
+
+
+.tabbed-nav__container {
+  background-color: #f4f5f7;
+}
+
+.tabbed-nav__group {
+  border-bottom: 1px solid #dfe1e6;
+  display: inline-flex;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.tabbed-nav__link {
+  background-color: rgb(248, 248, 248);
+  border: 1px solid #aaaaaa;
+  border-bottom: 0;
+  border-radius: 5px 5px 0px 0px;
+  font-weight: bold;
+  line-height: 15px;
+  padding: 10px;
+  margin: 0 2px 0 0;
+  color: #13161a;
+}
+
+@media screen and (max-width:500px) {
+
+  .tabbed-nav__group,
+  .tabbed-nav__link {
+    display: block;
+  }
+}
+
+.boards__container {
+  margin: 0 auto;
+  padding: 32px;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.boards__sidebar {
+  display: flex;
+  background-color: #6C547B;
+  border-radius: 3px;
+  margin: 0 32px 32px 0;
+  padding: 0 20px 32px 20px;
+  max-height: 130px;
+  max-width: 180px;
+  width: 20%;
+  flex-basis: 220px;
+}
+
+.boards__sidebar-content .title {
+  color: white;
+}
+
+.boards__sidebar-content a {
+  color: white;
+}
+
+.description {
+  color: lightblue;
+}
+
+.boards__group {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: flex-end; */
+  width: 80%;
+}
+
+.boards__board {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: hotpink;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-weight: bold;
+  height: 100px;
+  margin: 0 8px 16px 0;
+  max-width: 250px;
+  padding: 4px 8px 0 0;
+  position: relative;
+  color: white;
+  width: 25%;
+}
+
+@media screen and(max-width:1280px) and (min-width:750px) {
+  .boards__board {
+    width: 33%;
+  }
+}
+
+@media screen and(max-width:749px) {
+  .boards__board {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.board-1 {
+  max-width: 100%;
+  height: auto;
+  background-position: center;
+  background-color: #E9DAC1;
+}
