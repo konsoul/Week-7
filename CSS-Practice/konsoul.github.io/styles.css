@@ -1,0 +1,150 @@
+body {
+    font-family: 'Montserrat';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+p {
+    color: #d3d3d3;
+    font-weight: 500;
+}
+
+/* Header  */
+.header {
+    text-align: center;
+    background-color: #1B2430;
+    margin: 0 auto;
+}
+
+.title-heading {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #d3d3d3
+}
+
+.fa-brands {
+    color: #FFA500;
+    margin: 5px
+}
+
+.main__img {
+    padding-bottom: 35px;
+}
+
+
+
+/* Navigation Bar */
+.navbar {
+    padding-bottom: 4.5rem;
+}
+
+.navbar-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+#features {
+    padding: 7% 15%;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.heading-div {
+    text-align: center;
+    margin: 0 auto;
+    background-color: #1B2430;
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+}
+
+.paragraph-heading {
+    color:#d3d3d3
+}
+
+.heading-para{
+    color:#d3d3d3;
+    width: 35%;
+    margin: auto;
+}
+
+/* pricing */
+
+#pricing {
+    font-family: 'Montserrat';
+    padding: 100px;
+    text-align: center;
+}
+
+.pricing-col {
+    padding: 3% 2%;
+}
+
+@media (max-width: 1028px) {
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        font-weight: 900;
+    }
+
+    #title {
+        text-align: center;
+    }
+
+    .header-image {
+        transform: rotate(0deg);
+        /* width: 60%; */
+        position: absolute;
+        /* left: 40%; */
+    }
+}
+
+/* Call to Action/Footer */
+#cta {
+    background-color: #1B2430;
+    text-align: center;
+    padding: 100px 0 70px 0;
+}
+
+.footer-text {
+    margin: 0 10% 2% 10%;
+    font-size: 3rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+#footer {
+    text-align: center;
+    padding: 7% 15%;
+}
+
+.fab {
+    margin: 5px;
+}
+
+.icons {
+    margin-bottom: 5pxpx;
+}
