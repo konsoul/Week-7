@@ -1,0 +1,396 @@
+{
+  "1": {
+    "endpoint": "Get all the artists",
+
+    "request": {
+      "method": "GET",
+      "URL": "/artists",
+      "headers": "none",
+      "body": "none"
+    },
+
+    "response": {
+      "headers": { "Content-Type": "application/json" },
+      "statusCode": 200,
+      "body": "none"
+    }
+  },
+
+  "2": {
+    "endpoint": "Get a specific artist's details based on artistId",
+
+    "request": {
+      "method": "GET",
+      "URL": "/artists/:artistId",
+      "headers": "none",
+      "body": "none"
+    },
+
+    "response": {
+      "headers": { "Content-Type": "application/json" },
+      "statusCode": 200,
+      "body": "none"
+    }
+  },
+
+  "3": {
+    "endpoint": "Add an artist",
+
+    "request": {
+      "method": "POST",
+      "URL": "/artists",
+      "headers": { "Content-Type": "application/json" },
+      "body": "none"
+    },
+
+    "response": {
+      "headers": { "Content-Type": "application/json" },
+      "statusCode": 201,
+      "body": {
+        "artistId": 2,
+        "name": "Led Zeppelin"
+      }
+    }
+  },
+
+  "4": {
+    "endpoint": "Edit a specified artist by artistId",
+
+    "request": {
+      "method": "PUT",
+      "URL": "/artists/:artistId",
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "name": "Led Zeppelin"
+      }
+    },
+
+    "response": {
+      "headers": { "Content-Type": "application/json" },
+      "statusCode": 200,
+      "body": {
+        "artistId": 2,
+        "name": "Led Zeppelin"
+      }
+    }
+  },
+
+  "5": {
+    "endpoint": "Delete a specified artist by artistId",
+
+    "request": {
+      "method": "DELETE",
+      "URL": "/artists/:artistId",
+      "headers": { "Content-Type": "application/json" },
+      "body": "none"
+    },
+
+    "response": {
+      "statusCode": 200,
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "message": "Successfully deleted"
+      }
+    }
+  },
+
+  "6": {
+    "endpoint": "Get all albums of a specific artist based on artistId",
+
+    "request": {
+      "method": "GET",
+      "URL": "/artists/:artistId/albums",
+      "headers": "none",
+      "body": "none"
+    },
+
+    "response": {
+      "headers": { "Content-Type": "application/json" },
+      "statusCode": 200,
+      "body": [
+        {
+          "albumId": 1,
+          "name": "Stadium Arcadium",
+          "artistId": 1
+        }
+      ]
+    }
+  },
+
+  "7": {
+    "endpoint": "Get a specific albums details based on albumId",
+
+    "request": {
+      "method": "GET",
+      "URL": "/albums/albums",
+      "headers": "none",
+      "body": "none"
+    },
+
+    "response": {
+      "headers": { "Content-Type": "application/json" },
+      "statusCode": 200,
+      "body": {
+        "albumId": 1,
+        "name": "Stadium Arcadium",
+        "artistId": 1,
+        "artist": {
+          "artistId": 1,
+          "name": "Red Hot Chili Peppers"
+        },
+        "songs": [
+          {
+            "songId": 1,
+            "name": "Dani California",
+            "trackNumber": 1
+          }
+        ]
+      }
+    }
+  },
+
+  "8": {
+    "endpoint": "Add an album to a specific artist based on artistId",
+
+    "request": {
+      "method": "POST",
+      "URL": "/artists/:artistId/albums",
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "name": "Stadium Arcadium"
+      }
+    },
+
+    "response": {
+      "statusCode": 201,
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "albumId": 1,
+        "name": "Stadium Arcadium",
+        "artistId": 1
+      }
+    }
+  },
+
+  "9": {
+    "endpoint": "Edit a specified album by albumId",
+
+    "request": {
+      "method": "PUT",
+      "URL": "/albums/:albumId",
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "name": "Stadium Arcadium"
+      }
+    },
+
+    "response": {
+      "statusCode": 200,
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "albumId": 1,
+        "name": "Stadium Arcadium",
+        "artistId": 1
+      }
+    }
+  },
+
+  "10": {
+    "endpoint": "Delete a specified album by albumId",
+
+    "request": {
+      "method": "DELETE",
+      "URL": "/albums/:albumId",
+      "headers": "none",
+      "body": "none"
+    },
+
+    "response": {
+      "statusCode": 200,
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "message": "Successfully deleted"
+      }
+    }
+  },
+
+  "11": {
+    "endpoint": "Get all songs of a specific artists based on artistId",
+
+    "request": {
+      "method": "GET",
+      "URL": "/artists/:artistId/songs",
+      "headers": "none",
+      "body": "none"
+    },
+
+    "response": {
+      "statusCode": 200,
+      "headers": { "Content-Type": "application/json" },
+      "body": [
+        {
+          "name": "Dani California",
+          "lyrics": "...",
+          "trackNumber": 1,
+          "songId": 1,
+          "albumId": 1
+        }
+      ]
+    }
+  },
+
+  "12": {
+    "endpoint": "Get all songs of a specific album based on albumId",
+
+    "request": {
+      "method": "GET",
+      "URL": "/albums/:albumId/songs",
+      "headers": "none",
+      "body": "none"
+    }
+  },
+
+  "response": {
+    "statusCode": 200,
+    "headers": { "Content-Type": "application/json" },
+    "body": [
+      {
+        "name": "Dani California",
+        "lyrics": "...",
+        "trackNumber": 1,
+        "songId": 1,
+        "albumId": 1
+      }
+    ]
+  },
+
+  "13": {
+    "endpoint": "Get all songs of a specified track number",
+
+    "request": {
+      "method": "GET",
+      "URL": "/trackNumbers/:trackNumber/songs",
+      "headers": "none",
+      "body": "none"
+    },
+
+    "response": {
+      "statusCode": 200,
+      "headers": { "Content-Type": "application/json" },
+      "body": [
+        {
+          "name": "Dani California",
+          "lyrics": "...",
+          "trackNumber": 1,
+          "songId": 1,
+          "albumId": 1
+        }
+      ]
+    }
+  },
+
+  "14": {
+    "endpoint": "Get a specific songs details based on songId",
+
+    "request": {
+      "method": "GET",
+      "URL": "/songs/:songId",
+      "headers": "none",
+      "body": "none"
+    },
+
+    "response": {
+      "statusCode": 200,
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "songId": 1,
+        "name": "Dani California",
+        "trackNumber": 1,
+        "lyrics": "...",
+        "albumId": 1,
+        "artist": {
+          "artistId": 1,
+          "name": "Red Hot Chili Peppers"
+        },
+        "album": {
+          "albumId": 1,
+          "name": "Stadium Arcadium",
+          "artistId": 1
+        }
+      }
+    }
+  },
+
+  "15": {
+    "endpoint": "Add a song to a specific album based on albumId",
+
+    "request": {
+      "method": "POST",
+      "URL": "/albums/:albumId/songs",
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "name": "Dani California",
+        "trackNumber": 1,
+        "lyrics": "..."
+      }
+    },
+
+    "response": {
+      "statusCode": 200,
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "songId": 1,
+        "name": "Dani California",
+        "trackNumber": 1,
+        "lyrics": "...",
+        "albumId": 1
+      }
+    }
+  },
+
+  "16": {
+    "endpoint": "Edit a specified song by songId",
+
+    "request": {
+      "method": "PUT",
+      "URL": "/songs/:songId",
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "name": "Dani California",
+        "trackNumber": 1,
+        "lyrics": "..."
+      }
+    },
+
+    "response": {
+      "statusCode": 200,
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "songId": 1,
+        "name": "Dani California",
+        "trackNumber": 1,
+        "lyrics": "...",
+        "albumId": 1
+      }
+    }
+  },
+
+  "17": {
+    "endpoint": "Delete a specified song by songId",
+
+    "request": {
+      "method": "DELETE",
+      "URL": "/songs/:songId",
+      "headers": "none",
+      "body": "none"
+    },
+
+    "response": {
+      "statusCode": 200,
+      "headers": { "Content-Type": "application/json" },
+      "body": {
+        "message": "Successfully deleted"
+      }
+    }
+  }
+}
